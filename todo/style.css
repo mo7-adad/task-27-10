@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f8;
+    color: #222;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.welcome {
+    max-width: 500px;
+    margin: 0 auto 20px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    background-color: #ffd43b;
+    color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.welcome p {
+    margin: 0;
+}
+
+.welcome button {
+    border: none;
+    background: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.app {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 24px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.theme-btn {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: transparent;
+    color: inherit;
+}
+
+form {
+    display: flex;
+    gap: 8px;
+    margin: 20px 0;
+}
+
+form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3b5bdb;
+    color: white;
+    font-size: 16px;
+}
+
+.filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.filter {
+    padding: 6px 14px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: transparent;
+    color: inherit;
+}
+
+.filter.active {
+    background-color: #3b5bdb;
+    border-color: #3b5bdb;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+li .text {
+    flex: 1;
+    cursor: pointer;
+    word-break: break-word;
+}
+
+li.done .text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+li button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.edit {
+    background-color: #e7f5ff;
+    color: #1c7ed6;
+}
+
+.delete {
+    background-color: #fff0f0;
+    color: #e03131;
+}
+
+.count {
+    margin: 16px 0 0;
+    color: #777;
+    font-size: 14px;
+}
+
+body.dark {
+    background-color: #121212;
+    color: #eee;
+}
+
+body.dark .app {
+    background-color: #1e1e1e;
+}
+
+body.dark form input {
+    background-color: #2a2a2a;
+    border-color: #444;
+    color: #eee;
+}
+
+body.dark li {
+    border-color: #333;
+}
+
+body.dark .theme-btn,
+body.dark .filter {
+    border-color: #444;
+}
+
+body.dark .count {
+    color: #aaa;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+
+    .app {
+        padding: 16px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
